@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Webtoons</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>WebtoonFan</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#webtoons">Webtoons</a></li>
+            <li><a href="#vote-section">Vote</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Popular Webtoons</h3>
+        <ul>
+            <li><a href="#">Tower of God</a></li>
+            <li><a href="#">Solo Leveling</a></li>
+            <li><a href="#">Noblesse</a></li>
+            <li><a href="#">The Beginning After the End</a></li>
+            <li><a href="#">Omniscient Reader</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section id="webtoons" class="content">
+            <h2>Top 5 Fantasy Webtoons</h2>
+            <div class="webtoon-container" id="webtoon-list">
+                <!-- Webtoon items will be added dynamically using JavaScript -->
+            </div>
+        </section>
+
+        <!-- Voting Section -->
+        <section id="vote-section" class="content">
+            <h2>Vote: Which Do You Prefer? Manhwa or Anime?</h2>
+            <div class="vote-buttons">
+                <button id="vote-manhwa" class="vote-btn">Vote Manhwa</button>
+                <button id="vote-anime" class="vote-btn">Vote Anime</button>
+            </div>
+            <div id="vote-results">
+                <!-- Voting results will be displayed here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="about-section content">
+        <h2>About Us</h2>
+        <p>We are passionate fans of webtoons and anime, striving to bring you the latest and best in the world of manhwa and animation. Join us to explore amazing stories!</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section content">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 WebtoonFan. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+const mongoose = require('mongoose');
+const Webtoon = require('./models/Webtoon');
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/webtoons', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+// Sample webtoons data
+const sampleWebtoons = [
+    { title: 'Tower of God', image: 'https://example.com/tog.jpg', description: 'A boy enters a mysterious tower...' },
+    { title: 'Solo Leveling', image: 'https://example.com/sl.jpg', description: 'A weak hunter becomes the strongest...' },
+    { title: 'Noblesse', image: 'https://example.com/noblesse.jpg', description: 'A noble awakens after centuries...' },
+    { title: 'The Beginning After the End', image: 'https://example.com/tba.jpg', description: 'A king reincarnates in a magical world...' },
+    { title: 'The Gamer', image: 'https://example.com/gamer.jpg', description: 'A boy gains the ability to live in an RPG-like world...' }
+];
+
+// Insert data into MongoDB
+Webtoon.insertMany(sampleWebtoons)
+    .then(() => {
+        console.log('Webtoons data inserted successfully');
+        mongoose.connection.close();
+    })
+    .catch(err => console.log('Error inserting data:', err));
